@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>胜众网络 前端规范</title>
+		<link rel="stylesheet" href="css/sz.css" />
+		<link rel="stylesheet" href="css/demo.css" />
+	</head>
+	<body>
+		<div id="header">
+			<div class="inner">
+				<h1>胜众网络前端规范</h1>
+			</div>
+		</div>
+		<div id="mainbody">
+			<div class="inner">
+				<div id="sidenav" class="pull-left">
+					<ul class="list-unstyled">
+						<li class="level1-nav">
+							<a href="javascript:void(0)">快速上手</a>
+						</li>
+						<li class="level1-nav">
+							<a href="javascript:void(0)" >基本</a>
+							<ul class="list-unstyled">
+								<li class="level2-nav"><a href="button.html">按钮</a></li>
+							</ul>
+						</li>
+						<li class="level1-nav">
+							<a href="javascript:void(0)" class="active-nav">表单</a>
+							<ul class="list-unstyled">
+								<li class="level2-nav"><a href="radio.html">单选框</a></li>
+								<li class="level2-nav"><a href="checkbox.html">多选框</a></li>
+								<li class="level2-nav"><a href="select.html" class="active-nav">选择器</a></li>
+								<li class="level2-nav"><a href="input.html">输入框</a></li>
+							</ul>
+						</li>
+						<li class="level1-nav">
+							<a href="javascript:void(0)">展示</a>
+							<ul class="list-unstyled hide">
+								<li class="level2-nav"><a href="alert.html">警告框</a></li>
+								<li class="level2-nav"><a href="badge.html">徽章</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="content" class="pull-left">
+					<div class="section">
+						<h1>分页</h1>
+						<p>为您的网站或应用提供带有展示页码的分页组件</p>
+					</div>
+					<div class="section">
+						<h2>代码演示</h2>
+						<div class="section">
+							<h3>数字徽标</h3>
+							<div class="demonstration">
+								<div class="example">
+									<a href="#" class="badge" count="234"></a>
+								</div>
+								<div class="note">
+									<p>
+										.badge标签添加自定义属性 count 值为number
+									</p>
+								</div>
+								<div class="code">
+									<xmp>
+<a href="#" class="badge" count="234"></a>
+									</xmp>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<h3>有限制的数字徽标</h3>
+							<div class="demonstration">
+								<div class="example">
+									<a href="#" class="badge" count="123" limited="99"></a>
+								</div>
+								<div class="note">
+									<p>.badge标签添加自定义属性 limited 值为number</p>
+								</div>
+								<div class="code">
+									<xmp>
+<a href="#" class="badge" count="123" limited="99"></a>
+									</xmp>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<h3>不同颜色的数字徽标</h3>
+							<div class="demonstration">
+								<div class="example">
+									<a href="#" class="badge" count="234" limited="99"></a>
+									<a href="#" class="badge success" count="234" limited="99"></a>
+									<a href="#" class="badge error" count="234" limited="99"></a>
+								</div>
+								<div class="note">
+									<p>
+										.badge默认<br />.badge添加 .success显示绿色背景</br>.badge添加 .error显示红色背景
+									</p>
+								</div>
+								<div class="code">
+									<xmp>
+<a href="#" class="badge" count="234" limited="99"></a>
+<a href="#" class="badge success" count="234" limited="99"></a>
+<a href="#" class="badge error" count="234" limited="99"></a>
+									</xmp>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sz.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/demo.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

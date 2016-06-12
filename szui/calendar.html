@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>胜众网络 前端规范</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" href="css/sz.css" />
+		<!--<link rel="stylesheet" href="css/demo.css" />-->
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">胜众网络前端规范</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UserName <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</div>
+		<!--<div id="header">
+			<div class="inner">
+				<h1>胜众网络前端规范</h1>
+			</div>
+		</div>-->
+		<div id="mainbody">
+			<div class="inner">
+				<div id="sidenav" class="pull-left">
+					<ul class="list-unstyled">
+						<li>
+							<a href="index.html" class="level1-nav-a">快速上手</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a">基本</a>
+							<ul class="list-unstyled level2-nav-ul hide">
+								<li class="level2-nav"><a href="button.html" class="level2-nav-a">按钮</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a active">表单</a>
+							<ul class="list-unstyled level2-nav-ul">
+								<li class="level2-nav"><a href="radio.html" class="level2-nav-a">单选框</a></li>
+								<li class="level2-nav"><a href="checkbox.html" class="level2-nav-a">多选框</a></li>
+								<li class="level2-nav"><a href="select.html" class="level2-nav-a">选择器</a></li>
+								<li class="level2-nav"><a href="input.html" class="level2-nav-a">输入框</a></li>
+								<li class="level2-nav"><a href="calendar.html" class="level2-nav-a active">日期选择</a></li>
+								<li class="level2-nav"><a href="editor.html" class="level2-nav-a">编辑器</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a">展示</a>
+							<ul class="list-unstyled level2-nav-ul hide">
+								<!--<li class="level2-nav"><a href="alert.html" class="level2-nav-a">警告框</a></li>-->
+								<li class="level2-nav"><a href="badge.html" class="level2-nav-a">徽章</a></li>
+								<li class="level2-nav"><a href="progress.html" class="level2-nav-a">进度条</a></li>
+								<li class="level2-nav"><a href="table.html" class="level2-nav-a">表格</a></li>
+								<li class="level2-nav"><a href="modal.html" class="level2-nav-a">对话框</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="demo.html" class="level1-nav-a">示例</a>
+						</li>
+					</ul>
+				</div>
+				<div id="content" class="pull-left">
+					<div class="inner">
+						<ol class="breadcrumb">
+						  <li><a href="index.html">首页</a></li>
+						  <li class="active">表单</li>
+						  <li class="active">日期选择</li>
+						</ol>
+						<div class="section">
+							<h1>日期选择</h1>
+							<p>选择日期和时间</p>
+						</div>
+						<div class="section">
+							<h2>代码演示</h2>
+							<div class="section">
+								<h3>基本样式</h3>
+								<div class="demonstration">
+									<div class="example">
+										<div class="form-group">
+											<label>录入时间</label>
+											<input size="16" type="text" value="2012-06-15 14:45" readonly class="form_datetime" id="form_datetime1">
+										</div>
+									</div>
+									<div class="note">
+										<p>日期选择功能依赖于<a href="css/bootstrap-datetimepicker.css" target="_blank">bootstrap-datetimepicker.css</a>以及<a href="js/bootstrap-datetimepicker.js" target="_blank">bootstrap-datetimepicker.js</a>文件</p>
+										<p>html和js代码如下所示</p>
+									</div>
+									<div class="code">
+										<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">size=</span><span class="s">"16"</span> <span class="na">class=</span><span class="s">"form_datetime"</span> <span class="na">readonly</span> <span class="na">value=</span><span class="s">"2012-06-15 14:45"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#form_datetime1'</span><span class="p">).</span><span class="nx">datetimepicker</span><span class="p">({</span> <span class="na">format</span><span class="p">:</span> <span class="s1">'yyyy-mm-dd hh:ii'</span> <span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span>
+	</code></pre></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/respond.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sz.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/demo.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+    		$("#form_datetime1").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+		</script>        
+	</body>
+</html>

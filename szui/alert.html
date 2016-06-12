@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>胜众网络 前端规范</title>
+		<link rel="stylesheet" href="css/sz.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div id="header">
+			<div class="inner">
+				<h1>胜众网络前端规范</h1>
+			</div>
+		</div>
+		<div id="mainbody">
+			<div class="inner">
+				<div id="sidenav" class="pull-left">
+					<ul class="list-unstyled">
+						<li>
+							<a href="index.html" class="level1-nav-a">快速上手</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a">基本</a>
+							<ul class="list-unstyled level2-nav-ul hide">
+								<li class="level2-nav"><a href="button.html" class="level2-nav-a">按钮</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a">表单</a>
+							<ul class="list-unstyled level2-nav-ul hide">
+								<li class="level2-nav"><a href="radio.html" class="level2-nav-a">单选框</a></li>
+								<li class="level2-nav"><a href="checkbox.html" class="level2-nav-a">多选框</a></li>
+								<li class="level2-nav"><a href="select.html" class="level2-nav-a">选择器</a></li>
+								<li class="level2-nav"><a href="input.html" class="level2-nav-a">输入框</a></li>
+								<li class="level2-nav"><a href="calendar.html" class="level2-nav-a">日期选择</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a active">展示</a>
+							<ul class="list-unstyled level2-nav-ul">
+								<li class="level2-nav"><a href="alert.html" class="level2-nav-a active">警告框</a></li>
+								<li class="level2-nav"><a href="badge.html" class="level2-nav-a">徽章</a></li>
+								<li class="level2-nav"><a href="progress.html" class="level2-nav-a">进度条</a></li>
+								<li class="level2-nav"><a href="table.html" class="level2-nav-a">表格</a></li>
+								<li class="level2-nav"><a href="modal.html" class="level2-nav-a">对话框</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="content" class="pull-left">
+					<div class="section">
+						<h1>alert警告提示</h1>
+						<p>警告提示，展现需要关注的信息。</p>
+					</div>
+					<div class="section">
+						<h2>代码演示</h2>
+						<div class="section">
+							<h3>四种样式的警告框</h3>
+							<div class="demonstration">
+								<div class="example">
+									<div class="alert alert-success">成功提示文案</div>
+									<div class="alert alert-info">消息提示文案</div>
+									<div class="alert alert-warning">警告提示文案</div>
+									<div class="alert alert-danger">错误提示文案</div>
+								</div>
+								<div class="note">
+									<p>将任意文本和一个可选的关闭按钮组合在一起就能组成一个警告框，.alert 类是必须要设置的。</p>
+									<p>另外还提供了4种有意义的警告类(成功:alert-success，信息:alert-info，警告:alert-warning，错误:alert-danger)。</p>
+								</div>
+								<div class="code">
+									<xmp>
+<div class="alert alert-success">成功提示文案</div>
+<div class="alert alert-info">消息提示文案</div>
+<div class="alert alert-warning">警告提示文案</div>
+<div class="alert alert-danger">错误提示文案</div>
+									</xmp>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<h3>可关闭的警告框</h3>
+							<div class="demonstration">
+								<div class="example">
+									<div class="alert alert-warning alert-dismissible">
+									  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									     警告提示框
+									</div>
+								</div>
+								<div class="note">
+									<p>如果需要为警告框组件提供关闭功能，请使用 jQuery 警告框插件。</p>
+									<p>为警告框添加一个可选的 .alert-dismissible 类和一个关闭按钮。</p>
+									<p>确保在所有设备上的正确行为，务必给button元素添加 data-dismiss="alert" 属性。</p>
+								</div>
+								<div class="code">
+									<xmp>
+<div class="alert alert-warning alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	警告提示框
+</div>
+									</xmp>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sz.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>胜众网络 前端规范</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/pagination.css" />
+		<link rel="stylesheet" href="css/sz.css" />
+		<!--<link rel="stylesheet" href="css/demo.css" />-->
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">胜众网络前端规范</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UserName <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</div>
+		<!--<div id="header">
+			<div class="inner">
+				<h1>胜众网络前端规范</h1>
+			</div>
+		</div>-->
+		<div id="mainbody">
+			<div class="inner">
+				<div id="sidenav" class="pull-left">
+					<ul class="list-unstyled">
+						<li>
+							<a href="index.html" class="level1-nav-a">快速上手</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a">基本</a>
+							<ul class="list-unstyled level2-nav-ul hide">
+								<li class="level2-nav"><a href="button.html" class="level2-nav-a">按钮</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a">表单</a>
+							<ul class="list-unstyled level2-nav-ul hide">
+								<li class="level2-nav"><a href="radio.html" class="level2-nav-a">单选框</a></li>
+								<li class="level2-nav"><a href="checkbox.html" class="level2-nav-a">多选框</a></li>
+								<li class="level2-nav"><a href="select.html" class="level2-nav-a">选择器</a></li>
+								<li class="level2-nav"><a href="input.html" class="level2-nav-a">输入框</a></li>
+								<li class="level2-nav"><a href="calendar.html" class="level2-nav-a">日期选择</a></li>
+								<li class="level2-nav"><a href="editor.html" class="level2-nav-a">编辑器</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="level1-nav-a active">展示</a>
+							<ul class="list-unstyled level2-nav-ul">
+								<!--<li class="level2-nav"><a href="alert.html" class="level2-nav-a">警告框</a></li>-->
+								<li class="level2-nav"><a href="badge.html" class="level2-nav-a">徽章</a></li>
+								<li class="level2-nav"><a href="progress.html" class="level2-nav-a">进度条</a></li>
+								<li class="level2-nav"><a href="table.html" class="level2-nav-a active">表格</a></li>
+								<li class="level2-nav"><a href="modal.html" class="level2-nav-a">对话框</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="demo.html" class="level1-nav-a">示例</a>
+						</li>
+					</ul>
+				</div>
+				<div id="content" class="pull-left">
+					<div class="inner">
+						<ol class="breadcrumb">
+						  <li><a href="index.html">首页</a></li>
+						  <li class="active">展示</li>
+						  <li class="active">表格</li>
+						</ol>
+						<div class="section">
+							<h1>table表格</h1>
+						</div>
+						<div class="section">
+							<h2>代码演示</h2>
+							<div class="section">
+								<h3>基本表格</h3>
+								<div class="demonstration">
+									<div class="example">
+										<div class="table">
+											<ul class="list-unstyled">
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">编辑</button>
+												</li>
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">删除</button>
+												</li>
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">新增</button>
+												</li>
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">导入</button>
+												</li>
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">导出</button>
+												</li>
+												<div class="clear"></div>
+											</ul>
+				                            <div class="table-body">
+				                                <table>
+				                                    <thead class="table-thead">
+				                                    <tr>
+				                                        <th class="col-xs">
+				                                            <label class="checkbox">
+				                                                <input class="input-checkbox" value="2" type="checkbox">
+				                                                <span class="style-checkbox"></span>
+				                                            </label>
+				                                        </th>
+				                                        <th class="col-md">姓名</th>
+				                                        <th class="col-sm">年龄</th>
+				                                        <th class="col-lg">编号</th>
+				                                        <th class="col-lg">联系电话</th>
+				                                        <th class="col-xlg">住址</th>
+				                                    </tr>
+				                                    </thead>
+				                                    <tbody class="table-tbody data-container1">
+				                                    </tbody>
+				                                </table>
+				                            </div>
+				                        </div>
+				                        <div id="pagination1" class="pagination">
+										</div>
+									</div>
+									<div class="note">
+										<p>table表格的html代码如下</p>
+									</div>
+									<div class="code">
+										<div class="highlight"><pre><code class="language-html code-style" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+	  <span class="c1">//table操作</span>
+	  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span> 
+	     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>编辑<span class="nt">&lt;/button&gt;</span>
+	     <span class="nt">&lt;/li&gt;</span>
+	     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>删除<span class="nt">&lt;/button&gt;</span>
+	     <span class="nt">&lt;/li&gt;</span>
+	     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>新增<span class="nt">&lt;/button&gt;</span>
+	     <span class="nt">&lt;/li&gt;</span>
+	     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>导入<span class="nt">&lt;/button&gt;</span>
+	     <span class="nt">&lt;/li&gt;</span>
+	     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>导出<span class="nt">&lt;/button&gt;</span>
+	     <span class="nt">&lt;/li&gt;</span>
+	     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clear"</span><span class="nt">&gt;</span><span class="nt">&lt;/div&gt;</span>
+	  <span class="nt">&lt;/ul&gt;</span>
+	  <span class="c1">//table表格</span>
+	  <span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"table-body"</span><span class="nt">&gt</span>
+	     <span class="nt">&lt;table&gt;</span>
+		 <span class="c1">//table表头</span>
+		 <span class="nt">&lt;thead </span><span class="na">class=</span><span class="s">"table-thead"</span><span class="nt">&gt;</span>
+	           <span class="nt">&lt;tr&gt;</span>
+	             <span class="nt">&lt;th </span><span class="na">class=</span><span class="s">"col-xs"</span><span class="nt">&gt;</span>
+		       <span class="nt">&lt;label </span><span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;input </span><span class="na">class=</span><span class="s">"input-checkbox"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">/&gt;</span>
+			<span class="nt">&lt;span </span><span class="na">class=</span><span class="s">"style-checkbox"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span>
+		       <span class="nt">&lt;/label&gt;</span>
+		    <span class="nt">&lt;/th&gt;</span>
+		    <span class="nt">&lt;th </span><span class="na">class=</span><span class="s">"col-md"</span><span class="nt">&gt;</span>姓名<span class="nt">&lt;/th&gt;</span>
+		    <span class="nt">&lt;th </span><span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>年龄<span class="nt">&lt;/th&gt;</span>
+	            <span class="nt">&lt;th </span><span class="na">class=</span><span class="s">"col-lg"</span><span class="nt">&gt;</span>编号<span class="nt">&lt;/th&gt;</span>
+	            <span class="nt">&lt;th </span><span class="na">class=</span><span class="s">"col-lg"</span><span class="nt">&gt;</span>联系电话<span class="nt">&lt;/th&gt;</span>
+		    <span class="nt">&lt;th </span><span class="na">class=</span><span class="s">"col-xlg"</span><span class="nt">&gt;</span>住址<span class="nt">&lt;/th&gt;</span>
+		  <span class="nt">&lt;/tr&gt;</span>
+		<span class="nt">&lt;/thead&gt;</span>
+		<span class="c1">//table内容</span>
+		<span class="nt">&lt;tbody</span> <span class="na">class="table-tbody data-container1"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;/tbody&gt;</span></tbody>
+	    <span class="nt">&lt;/table&gt;</span>
+	  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+	</code></pre></div>
+									</div>
+									<div class="note">
+										<p>pagination分页的html以及js代码如下</p>
+										<p>分页功能依赖于<a href="css/pagination.css" target="_blank">pagination.css</a>，<a href="js/pagination.js" target="_blank">pagination.js</a>以及<a href="js/template.js" target="_blank">template.js</a>文件</p>
+									</div>
+									<div class="code">
+										<div class="highlight"><pre><code class="language-js" data-lang="js">
+	<span class="c1">//分页HTML</span>
+	<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"pagination1"</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	</code></pre></div>
+	<div class="highlight"><pre style="overflow-x: hidden;"><code class="language-js" data-lang="js">
+	<span class="c1">//分页JS</span>
+	<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+	  	<span class="c1">//请求数据</span>
+		$.ajax({
+			<span class="na">type</span>: <span class="s">"get"</span>,
+			<span class="na">url</span>: <span class="s">"img/test.json"</span>,
+			<span class="na">dataType</span>: <span class="s">"json"</span>,
+			<span class="na">success</span>: <span class="kd">function</span>(data){
+				show(data)
+			},
+			<span class="na">error</span>: <span class="kd">function</span>(){
+				alert("error");
+			}
+		});
+		<span class="c1">//展示数据</span>
+		<span class="kd">function</span> show(data){
+			$(<span class="s">'#pagination1'</span>).pagination({
+				<span class="na">dataSource</span>: <span class="s">data.persons</span>,
+				<span class="na">pageSize</span>: <span class="s">5</span>,
+				<span class="na">showGoInput</span>: <span class="s">true</span>,
+				<span class="na">showGoButton</span>: <span class="s">true</span>,
+				<span class="na">callback</span>: <span class="kd">function</span>(data, pagination){
+				<span class="c1">// template method of yourself</span>
+				<span class="kd">var</span> dataContainer = $("<span class="s">.data-container1</span>");
+				dataContainer.empty();
+				$.each(data,<span class="kd">function</span>(i,item){
+					<span class="kd">var</span> html =  template(<span class="s">'datatemplate'</span>, item);				        	
+					dataContainer.append(html);	
+				 });
+				}
+			})
+		}
+	<span class="nt">&lt;/script&gt;</span>
+	</code></pre></div>
+	<div class="highlight"><pre><code class="language-js" data-lang="js">
+	<span class="c1">//数据模板</span>
+	<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/html"</span> <span class="na">id=</span><span class="s">"datatemplate"</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;tr</span><span class="nt">&gt;</span>
+	     <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"col-xs"</span><span class="nt">&gt;</span>
+	      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;input </span><span class="na">class=</span><span class="s">"input-checkbox"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"style-checkbox"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span>
+	      <span class="nt">&lt;/label&gt;</span>
+	     <span class="nt">&lt;/td&gt;</span>
+	     <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"col-md"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;span&gt;</span>
+	     	  <span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"javascript:;"</span><span class="nt">&gt;</span>{{name}}<span class="nt">&lt;/a&gt;</span>
+	     	<span class="nt">&lt;/span&gt;</span>
+	     <span class="nt">&lt;/td&gt;</span>
+	     <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;span&gt;</span>{{age}}<span class="nt">&lt;/span&gt;</span>
+	     <span class="nt">&lt;/td&gt;</span>
+	     <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"col-lg"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;span&gt;</span>{{number}}<span class="nt">&lt;/span&gt;</span>
+	     <span class="nt">&lt;/td&gt;</span>
+	     <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"col-lg"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;span&gt;</span>{{tel}}<span class="nt">&lt;/span&gt;</span>
+	     <span class="nt">&lt;/td&gt;</span>
+	     <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"col-xlg"</span><span class="nt">&gt;</span>
+	     	<span class="nt">&lt;span&gt;</span>{{address}}<span class="nt">&lt;/span&gt;</span>
+	     <span class="nt">&lt;/td&gt;</span>
+	  <span class="nt">&lt;/tr&gt;</span>
+	<span class="nt">&lt;/script&gt;</span>
+	</code></pre></div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/respond.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pagination.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sz.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/demo.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script id="datatemplate"  type="text/html">
+			<tr>
+				<td class="col-xs"><label class="checkbox"><input class="input-checkbox" value="2" type="checkbox"><span class="style-checkbox"></span></label></td>
+				<td class="col-md"><span><a href="javascript:;">{{name}}</a></span></td>
+				<td class="col-sm"><span>{{age}}</span></td>
+				<td class="col-lg"><span>{{number}}</span></td>
+				<td class="col-lg"><span>{{tel}}</span></td>
+				<td class="col-xlg"><span>{{address}}</span></td>
+			</tr>
+		</script>
+		<script type="text/javascript">
+			$.ajax({
+					type:"get",
+					url:"img/test.json",
+					dataType:"json",
+					success:function(data){
+						show(data)
+					},
+					error:function(){
+						alert("error");
+					}
+			});
+			function show(data){
+				$('#pagination1').pagination({
+				    dataSource: data.persons,
+				    pageSize: 5,
+				    showGoInput: true,
+				    showGoButton: true,
+				    callback: function(data, pagination){
+				        // template method of yourself
+				        var dataContainer = $(".data-container1");
+				        dataContainer.empty();
+				        $.each(data,function(i,item){
+				        	var html =  template('datatemplate', item);				        	
+				        	dataContainer.append(html);	
+				        });
+				    }
+				})
+			}
+		</script>
+	</body>
+</html>
