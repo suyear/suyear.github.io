@@ -6,9 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>胜众网络 前端规范</title>
 		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="css/editor.css" />
+		<link rel="stylesheet" href="css/pagination.css" />
+		<link rel="stylesheet" href="css/mmGrid.css" />
+		<link rel="stylesheet" href="css/mmPaginator.css" />
 		<link rel="stylesheet" href="css/sz.css" />
-		
 		<!--<link rel="stylesheet" href="css/demo.css" />-->
 	</head>
 	<body>
@@ -60,23 +61,23 @@
 							</ul>
 						</li>
 						<li>
-							<a href="javascript:void(0)" class="level1-nav-a active">表单</a>
-							<ul class="list-unstyled level2-nav-ul">
+							<a href="javascript:void(0)" class="level1-nav-a">表单</a>
+							<ul class="list-unstyled level2-nav-ul hide">
 								<li class="level2-nav"><a href="radio.html" class="level2-nav-a">单选框</a></li>
 								<li class="level2-nav"><a href="checkbox.html" class="level2-nav-a">多选框</a></li>
 								<li class="level2-nav"><a href="select.html" class="level2-nav-a">选择器</a></li>
 								<li class="level2-nav"><a href="input.html" class="level2-nav-a">输入框</a></li>
 								<li class="level2-nav"><a href="calendar.html" class="level2-nav-a">日期选择</a></li>
-								<li class="level2-nav"><a href="editor.html" class="level2-nav-a active">编辑器</a></li>
+								<li class="level2-nav"><a href="editor.html" class="level2-nav-a">编辑器</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="javascript:void(0)" class="level1-nav-a">展示</a>
-							<ul class="list-unstyled level2-nav-ul hide ">
+							<a href="javascript:void(0)" class="level1-nav-a active">展示</a>
+							<ul class="list-unstyled level2-nav-ul">
 								<!--<li class="level2-nav"><a href="alert.html" class="level2-nav-a">警告框</a></li>-->
 								<li class="level2-nav"><a href="badge.html" class="level2-nav-a">徽章</a></li>
 								<li class="level2-nav"><a href="progress.html" class="level2-nav-a">进度条</a></li>
-								<li class="level2-nav"><a href="table.html" class="level2-nav-a">表格</a></li>
+								<li class="level2-nav"><a href="table.html" class="level2-nav-a active">表格</a></li>
 								<li class="level2-nav"><a href="modal.html" class="level2-nav-a">对话框</a></li>
 							</ul>
 						</li>
@@ -89,63 +90,67 @@
 					<div class="inner">
 						<ol class="breadcrumb">
 						  <li><a href="index.html">首页</a></li>
-						  <li class="active">表单</li>
-						  <li class="active">编辑器</li>
+						  <li class="active">展示</li>
+						  <li class="active">表格</li>
 						</ol>
 						<div class="section">
-							<h1>编辑器</h1>
+							<h1>table表格</h1>
 						</div>
 						<div class="section">
 							<h2>代码演示</h2>
 							<div class="section">
-								<h3>基本样式</h3>
+								<h3>基本表格</h3>
 								<div class="demonstration">
 									<div class="example">
-									    <div class="editorBox" role="editorBox">
-									        <div class="editor">
-									            <textarea id="myEditor"></textarea>
-									        </div>
-									    </div>
+										<div class="table">
+											<ul class="list-unstyled">
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">编辑</button>
+												</li>
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">删除</button>
+												</li>
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">新增</button>
+												</li>
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">导入</button>
+												</li>
+												<li class="pull-left">
+													<button class="btn btn-primary btn-sm">导出</button>
+												</li>
+												<div class="clear"></div>
+											</ul>
+				                            <div class="table-body">
+				                                <table id="table2-1">
+				                                    
+				                                </table>
+				                            </div>
+				                       </div>
+				                        <div id="pagination1" class="pagination">
+										</div>
+										<!--<div id="paginator11-1"></div>-->
 									</div>
-									<div class="note">
-										<p>编辑器功能依赖于<a href="css/editor.css" target="_blank">editor.css</a>以及<a href="js/editor.js" target="_blank">editor.js文件</a></p>
-										<p>html代码如下</p>
-									</div>
-									<div class="code">
-										<div class="highlight">
-											<pre>
-												<code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>默认按钮<span class="nt">&lt;/button&gt;</span></code>
-											</pre>
-										</div>
-										<div class="highlight">
-											<pre>
-												<code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>首选项按钮<span class="nt">&lt;/button&gt;</span></code>
-											</pre>
-										</div>
-										<div class="highlight">
-											<pre>
-												<code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>成功按钮<span class="nt">&lt;/button&gt;</span></code>
-											</pre>
-										</div>
-										<div class="highlight">
-											<pre>
-												<code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span><span class="nt">&gt;</span>警告按钮<span class="nt">&lt;/button&gt;</span></code>
-											</pre>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clear"></div>
+									
 			</div>
 		</div>
+		<!--<table id="table2-1"></table>-->
 		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/respond.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>-->
-		<script src="js/editor.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pagination.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/sz.js" type="text/javascript" charset="utf-8"></script>
 		<!--<script src="js/demo.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mmGrid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mmPaginator.js" type="text/javascript" charset="utf-8"></script>
+		<script id="datatemplate"  type="text/html">
+			<tr>
+				<td class="col-md"><span><a href="javascript:;">{{SECUCODE}}</a></span></td>
+				<td class="col-sm"><span>{{SECUABBR}}</span></td>
+				<td class="col-lg"><span>{{CLOSINGPRICE}}</span></td>
+			</tr>
+		</script>
+		<script src="js/test.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

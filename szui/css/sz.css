@@ -407,10 +407,14 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+.table-body{overflow-x: auto;}
 .table table {
-    width: 100%;
-    max-width: 100%;
+    /*width: 100%;
+    max-width: 100%;*/
     text-align: left;
+    width: 1000px;
+    table-layout: fixed;
+    
 }
 .table th, .table td {
     padding: 8px 10px;
@@ -429,23 +433,28 @@ table {
     border-left: 1px solid #e9e9e9;
 }
 .table .col-xs {
-    width: 4%;
+    /*width: 4%;*/
+    width: 60px;
     text-align: center;
 }
 .table .col-sm {
-    width: 8%;
+    /*width: 8%;*/
+   width: 100px;
     text-align: center;
 }
 .table .col-md {
-    width: 12%;
+    /*width: 12%;*/
+    width: 150px;
     text-align: center;
 }
 .table .col-lg {
-    width: 20%;
+    /*width: 20%;*/
+    width: 200px;
     text-align: center;
 }
 .table .col-xlg {
-    width: 30%;
+    /*width: 30%;*/
+    width: 250px;
     text-align: left;
 }
 .table .checkbox input[type=checkbox]{
@@ -476,6 +485,7 @@ table {
 }
 .navbar{
 	margin-bottom: 0;
+	border:0;
 }
 
 /*左侧导航样式*/

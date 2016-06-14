@@ -6,7 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>胜众网络 前端规范demo</title>
 		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="css/pagination.css"/>-->
+		<link rel="stylesheet" href="css/jquery.paginate.css" />
 		<link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
 		<link rel="stylesheet" href="css/bootstrap-dialog.css" />
 		<link rel="stylesheet" href="css/iconFont.css" />
@@ -196,7 +197,7 @@
 							  </ul>
 							  <!--table表格-->
 							  <div class="table-body">
-							     <table>
+							     <table id="myTable">
 									 <!--table表头-->
 									 <thead class="table-thead">
 								           <tr>
@@ -211,6 +212,11 @@
 								            <th class="col-lg">编号</th>
 								            <th class="col-lg">联系电话</th>
 									    <th class="col-xlg">住址</th>
+									    <th class="col-xlg">住址</th>
+									    <th class="col-xlg">住址</th>
+									    <th class="col-xlg">住址</th>
+									    <th class="col-xlg">住址</th>
+									    <th class="col-xlg">住址</th>
 									  </tr>
 									</thead>
 									<!--table内容-->
@@ -220,7 +226,7 @@
 							  </div>
 							</div>
 							<!--分页HTML-->
-							<div id="pagination1" class="pagination"></div>
+							<div id="pagination1"></div>
 						</div>
 					</div>
 				</div>
@@ -230,7 +236,8 @@
 		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/respond.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/pagination.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/pagination.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/jquery.paginate.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap-datetimepicker.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap-dialog.js" type="text/javascript" charset="utf-8"></script>
@@ -262,40 +269,62 @@
 		     <td class="col-xlg">
 		     	<span>{{address}}</span>
 		     </td>
+		     <td class="col-xlg">
+		     	<span>{{address}}</span>
+		     </td>
+		     <td class="col-xlg">
+		     	<span>{{address}}</span>
+		     </td>
+		     <td class="col-xlg">
+		     	<span>{{address}}</span>
+		     </td>
+		     <td class="col-xlg">
+		     	<span>{{address}}</span>
+		     </td>
+		     <td class="col-xlg">
+		     	<span>{{address}}</span>
+		     </td>
 		  </tr>
 		</script>
+		<!--分页JS-->
 		<script type="text/javascript">
-				//分页JS
-			  	//请求数据
-				$.ajax({
-					type: "get",
-					url: "img/test.json",
-					dataType: "json",
-					success: function(data){
-						show(data)
-					},
-					error: function(){
-						alert("error");
-					}
-				});
-				//展示数据
-				function show(data){
-					$('#pagination1').pagination({
-						dataSource: data.persons,
-						pageSize: 5,
-						showGoInput: true,
-						showGoButton: true,
-						callback: function(data, pagination){
-						// template method of yourself
-						var dataContainer = $(".data-container1");
-						dataContainer.empty();
-						$.each(data,function(i,item){
-							var html =  template('datatemplate', item);				        	
-							dataContainer.append(html);	
-						 });
-						}
-					})
+		  	var currentPage = 1;
+		  	requestData(currentPage);
+		  	//请求数据
+		  	function requestData(pageNumber){
+			   $.ajax({
+				type: "get",
+				url: "img/test1.json",
+				data: {"pageNumber":pageNumber},
+				dataType: "json",
+				success: function(data){
+					show(data)
+				},
+				error: function(){
+					alert("error");
 				}
+			   });
+			}
+			//展示数据
+			function show(data){
+				//渲染数据
+				var dataContainer = $(".data-container1");
+				dataContainer.empty();
+				$.each(data.persons,function(i,item){
+				  var html =  template('datatemplate', item);				        	
+				  dataContainer.append(html);	
+				});
+				//分页
+				var totalPage = data.totalPage;
+				$('#pagination1').paginate({
+					count: totalPage,
+					start: currentPage,
+					onChange: function(page){
+					  requestData(currentPage);
+					  currentPage = page
+					}
+				})
+			}
 		</script>
 		<!--时间选择-->
 		<script type="text/javascript">

@@ -44,7 +44,6 @@
 .qIcon.yuangong:before { content: "\e60d"; }
 .qIcon.zhequ:before { content: "\e60e"; }
 .qIcon.yunshangcheng:before { content: "\e60f"; }
-
 .qIcon.wangdian:before { content: "\e610"; }
 .qIcon.bangzhu:before { content: "\e611"; }
 .qIcon.fuwushichang:before { content: "\e612"; }
@@ -64,7 +63,6 @@
 .qIcon.gonggao:before { content: "\e61d"; }
 .qIcon.xinzengshangpin:before { content: "\e61e"; }
 .qIcon.banshou:before { content: "\e61f"; }
-
 .qIcon.jiaofei:before { content: "\e620"; }
 .qIcon.quanzhiliangkaifapingtai:before { content: "\e621"; }
 .qIcon.fuwu:before { content: "\e622"; }
@@ -81,7 +79,6 @@
 .qIcon.jiahao:before { content: "\e62d"; }
 .qIcon.dualArrowRight:before { content: "\e62e"; }
 .qIcon.yiyaoxiang:before { content: "\e62f"; }
-
 .qIcon.xizhuang:before { content: "\e630"; }
 .qIcon.zhongbiaoshoushi:before { content: "\e631"; }
 .qIcon.shipin:before { content: "\e632"; }
@@ -97,7 +94,6 @@
 .qIcon.huazhuang:before { content: "\e63c"; }
 .qIcon.calendar:before { content: "\e63d"; }
 .qIcon.danduduihao:before { content: "\e63f"; }
-
 .qIcon.shangchuan:before { content: "\e640"; }
 .qIcon.xiazai:before { content: "\e641"; }
 .qIcon.zaixianshenqing:before { content: "\e642"; }
@@ -114,18 +110,13 @@
 .qIcon.goumaikaitong:before { content: "\e64d"; }
 .qIcon.shenhetongguo:before { content: "\e64e"; }
 .qIcon.arrowLeft:before { content: "\e64f"; }
-
 .qIcon.arrowRight:before { content: "\e650"; }
 .qIcon.tixian:before { content: "\e651"; }
-
 .qIcon.yonghu:before { content: "\e68c"; }
-
 .qIcon.gouwu:before { content: "\e6fa"; }
-
 .qIcon.yundinghuo:before { content: "\e73d"; }
 .qIcon.yunhuoyuan:before { content: "\e742"; }
 .qIcon.eshenghuo:before { content: "\e782"; }
-
 .qIcon.yunxiaodian:before { content: "\e805"; }
 .qIcon.xiaoshouzhushou:before { content: "\e820"; }
 .qIcon.quanping:before { content: "\e834"; }
