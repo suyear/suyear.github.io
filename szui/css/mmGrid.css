@@ -194,6 +194,7 @@
 
 /* 背板 */
 .mmGrid .mmg-backboard{
+	/*padding-bottom: 30px;*/
     position: relative;
     display: none;
     background-image: url(img/furley_bg.png);
@@ -229,7 +230,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top:0;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .mmGrid .mmg-backboard label input{

@@ -6,11 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>胜众网络 前端规范</title>
 		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="css/pagination.css" />
+		<link rel="stylesheet" href="css/jquery.paginate.css" />
 		<link rel="stylesheet" href="css/mmGrid.css" />
 		<link rel="stylesheet" href="css/mmPaginator.css" />
 		<link rel="stylesheet" href="css/sz.css" />
-		<!--<link rel="stylesheet" href="css/demo.css" />-->
 	</head>
 	<body>
 		<div class="navbar navbar-default">
@@ -77,7 +76,8 @@
 								<!--<li class="level2-nav"><a href="alert.html" class="level2-nav-a">警告框</a></li>-->
 								<li class="level2-nav"><a href="badge.html" class="level2-nav-a">徽章</a></li>
 								<li class="level2-nav"><a href="progress.html" class="level2-nav-a">进度条</a></li>
-								<li class="level2-nav"><a href="table.html" class="level2-nav-a active">表格</a></li>
+								<li class="level2-nav"><a href="table.html" class="level2-nav-a">表格</a></li>
+								<li class="level2-nav"><a href="table2.html" class="level2-nav-a active">升级版表格</a></li>
 								<li class="level2-nav"><a href="modal.html" class="level2-nav-a">对话框</a></li>
 							</ul>
 						</li>
@@ -91,10 +91,10 @@
 						<ol class="breadcrumb">
 						  <li><a href="index.html">首页</a></li>
 						  <li class="active">展示</li>
-						  <li class="active">表格</li>
+						  <li class="active">升级版表格</li>
 						</ol>
 						<div class="section">
-							<h1>table表格</h1>
+							<h1>升级版表格</h1>
 						</div>
 						<div class="section">
 							<h2>代码演示</h2>
@@ -127,30 +127,127 @@
 				                                </table>
 				                            </div>
 				                       </div>
-				                        <div id="pagination1" class="pagination">
+				                        <div id="pagination1">
 										</div>
-										<!--<div id="paginator11-1"></div>-->
 									</div>
-									
+									<div class="note">
+										<p>table表格的html代码如下</p>
+									</div>
+									<div class="code">
+										<div class="highlight">
+											<xmp><div class="table">
+	  <!--table操作-->
+	  <ul class="list-unstyled"> 
+	     <li class="pull-left">
+	     	<button class="btn btn-primary btn-sm">编辑</button>
+	     </li>
+	     <li class="pull-left">
+	     	<button class="btn btn-primary btn-sm">删除</button>
+	     </li>
+	     <li class="pull-left">
+	     	<button class="btn btn-primary btn-sm">新增</button>
+	     </li>
+	     <li class="pull-left">
+	     	<button class="btn btn-primary btn-sm">导入</button>
+	     </li>
+	     <li class="pull-left">
+	     	<button class="btn btn-primary btn-sm">导出</button>
+	     </li>
+	     <div class="clear"></div>
+	  </ul>
+	  <!--table表格-->
+	  <div class="table-body">
+	     <table id="table2-1"></table>
+	  </div>
+</div>
+											</xmp>
+										</div>
+									</div>
+									<div class="note">
+										<p>pagination分页的html以及js代码如下</p>
+										<p>分页功能依赖于<a href="css/jquery.paginate.css" target="_blank">jquery.paginate.css</a>，<a href="js/jquery.paginate.js" target="_blank">jquery.paginate.js</a>文件</p>
+									</div>
+									<div class="code">
+										<div class="highlight">
+											<xmp>//分页HTML
+<div id="pagination1"></div>
+<script type="text/javascript">
+	var currentPage = 1;
+  	requestData(currentPage);
+  	//请求数据
+  	function requestData(pageNumber){
+	   $.ajax({
+		type: "get",
+		url: "img/stockQuote.json",
+		data: {"pageNumber":pageNumber},
+		dataType: "json",
+		success: function(data){
+			show(data)
+		},
+		error: function(){
+			alert("error");
+		}
+	   });
+	}
+	//展示数据
+	function show(data){
+		$('#table2-1').mmGrid({
+			height:'auto',
+	        cols: cols,
+	        items: data.items,
+	        remoteSort:true ,
+	        sortName: 'DAYCHANGERATE',
+	        sortStatus: 'asc'
+	    });
+	
+		//分页
+		var totalPage = data.totalCount;
+		$("#pagination1").paginate({
+			count: totalPage,
+			start: currentPage,
+			onChange: function(page){
+				requestData(page);
+				currentPage = page;
+			}
+		});
+	}
+
+	//表头
+    var cols = [
+        {title:'<label class="checkbox"><input class="input-checkbox" type="checkbox"><span class="style-checkbox"></span></label>', name:'', width: 50, align: 'center', renderer: function(val,item,rowIndex){
+            return '<div class="btnPrice"><label class="checkbox"><input class="input-checkbox" type="checkbox"><span class="style-checkbox"></span></label></div>';
+        }},
+        { title:'股票代码', name:'SECUCODE' ,width:100, align:'center'},
+        { title:'股票名称', name:'SECUABBR' ,width:150, align:'center'},
+        { title:'今收盘', name:'CLOSINGPRICE' ,width:80, align:'center'},
+        { title:'涨跌幅', name:'DAYCHANGERATE' ,width:80, align:'center',type:'number', sortable: true},
+        { title:'涨跌额', name:'DAYCHANGE' ,width:80, align:'center'},
+        { title:'振幅', name:'AMPLITUDE' ,width:80, align:'center'},
+        { title:'成交量(手)', name:'TURNOVERVOL' ,width:110, align:'center'},
+        { title:'成交额(万)', name:'TURNOVERVAL' ,width:110, align:'center'},
+        { title:'昨收盘', name:'PREVCLOSINGPRICE' ,width:80, align:'center'},
+        { title:'今开盘', name:'OPENINGPRICE',width:80, align:'center'},
+        { title:'最高价', name:'HIGHESTPRICE' ,width:80, align:'center'},
+        { title:'最低价', name:'LOWESTPRICE' ,width:80, align:'center'}
+    ];
+</script>
+											</xmp>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
 			</div>
 		</div>
-		<!--<table id="table2-1"></table>-->
 		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/respond.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/pagination.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.paginate.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/sz.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="js/demo.js" type="text/javascript" charset="utf-8"></script>-->
-		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/mmGrid.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/mmPaginator.js" type="text/javascript" charset="utf-8"></script>
-		<script id="datatemplate"  type="text/html">
-			<tr>
-				<td class="col-md"><span><a href="javascript:;">{{SECUCODE}}</a></span></td>
-				<td class="col-sm"><span>{{SECUABBR}}</span></td>
-				<td class="col-lg"><span>{{CLOSINGPRICE}}</span></td>
-			</tr>
-		</script>
-		<script src="js/test.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/szgrid.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

@@ -1,5 +1,7 @@
 
 $(function() {
+	
+		
 	    //头部动画
 		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();

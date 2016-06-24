@@ -205,8 +205,9 @@ button.close {
 .badge {
     position: relative;
     display: inline-block;
-    width: 28px;
-    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    padding:7px;
     margin-right: 15px;
     background-color: #eeeeee;
 }
@@ -240,6 +241,17 @@ button.close {
 }
 .badge.error .badge-count {
     background-color: #f36a5a;
+}
+.sz_badge{
+	    position: absolute;
+	    background: #ff7700;
+	    padding: 5px;
+	    color: #fff;
+	    border-radius: 10px;
+	    right: 5px;
+	    top: 0px;
+	    z-index: 9;
+	    cursor: pointer;
 }
 /*进度条*/
 .progress-line {
@@ -499,7 +511,7 @@ table {
 
 /*主内容区域*/
 #content{width: 100%;padding-left: 240px;}
-#content .inner{border-left:1px solid #e9e9e9;padding: 0 39px;padding-top: 30px;}
+#content .inner{border-left:1px solid #e9e9e9;padding: 30px;}
 #content .section{padding-bottom: 30px;}
 #content h1,#content h2,#content h3{padding: 20px 0;font-weight: 500;}
 #content h1{font-size: 30px;}
@@ -516,6 +528,7 @@ table {
 .breadcrumb{
 	padding: 12px 15px;
 	background-color: rgba(0,0,0,0.05);
+	position: relative;
 }
 .breadcrumb > li{
 	font-size: 14px;

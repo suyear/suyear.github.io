@@ -4,6 +4,7 @@
 
 !function($){
     var MMGrid = function (element, options) {
+    	console.log(options);
         this._id = (((1 + Math.random()) * 0x10000) | 0).toString(16);
         this._loadCount = 0;
         this.opts = options;
@@ -325,7 +326,7 @@
 
 
 
-            //初始化排序状态
+            //初始化排序状态bo
             if(opts.sortName){
                 for(var colIndex=0; colIndex< expandCols.length; colIndex++){
                     var col = expandCols[colIndex];
@@ -361,7 +362,6 @@
                     if(col.lockDisplay) bbHtml.push(' disabled="disabled"');
                     bbHtml.push('/><span>');
                     if(col.title){
-                    	console.log(col.title);
                     	if(col.title=='<label class="checkbox"><input class="input-checkbox" value="2" type="checkbox"><span class="style-checkbox"></span></label>'){
                     		bbHtml.push('全选/全不选');
                     	}
@@ -755,7 +755,7 @@
                 styleText.push(' }');
             }
 
-            $body.detach();
+//          $body.detach();
             try{
                 $style.text(styleText.join(''));
             }catch(error){
